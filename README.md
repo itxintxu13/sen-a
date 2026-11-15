@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sen-a · Space Detective Agency
 
-## Getting Started
+**Is that "historic" heatwave or flood a real trend, or just a bad year?**
+Sen-a is a web app where anyone can learn to answer that question with real NASA data.
 
-First, run the development server:
+Guided by **Sen**, a young sentinel who watches over Earth from a space station, you complete short missions: explore a climate signal, read its trend, and decide whether it is a **★ confirmed case** or just a **☆ clue**. Every finding becomes a star in your own constellation, and you learn to review other people's research, catching mistakes like confusing correlation with causation.
+
+🔗 **Live demo:** [sen-a.vercel.app](https://sen-a.vercel.app)
+🚀 Built for the **NASA Space Apps Challenge 2026**, challenge *Be an Earth System Trend Detective*.
+
+> The demo starts with the guided tutorial (Mission 00 · Valencia). Finish it to unlock the rest of the app.
+
+## The data
+
+All the numbers come from NASA, downloaded through [Giovanni (NASA GES DISC)](https://giovanni.gsfc.nasa.gov/) for **2001–2024**, around Valencia (Spain) and the Poyo river basin, where the 2024 DANA flood hit hardest:
+
+| Signal | Dataset |
+|---|---|
+| Rainfall (monthly and daily) | GPM IMERG v07 (`GPM_3IMERGM`, `GPM_3IMERGDF`) |
+| Sea temperature | MERRA-2 (`M2TMNXOCN`, `TSKINWTR`) |
+
+Trends were calculated with the **Mann-Kendall test** and **Sen's slope**, and relationships between signals with **Spearman correlation**. Inside the app we keep one simple rule: **p < 0.05 → confirmed case**, anything else stays a clue.
+
+## Run it locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Built with Next.js, React, TypeScript, Tailwind CSS, Framer Motion and Three.js. Progress is saved in your browser; there are no accounts yet.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## What's next
 
-## Learn More
+- Live data straight from NASA Earthdata instead of pre-computed results
+- Accounts and real peer review between users
+- More places, more signals, more missions
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*You don't need to be a renowned scientist to take part in science.*
