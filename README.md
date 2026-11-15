@@ -1,12 +1,14 @@
 # Sen-a · Space Detective Agency
 
+![Sen-a, Space detective agency](https://assets.spaceappschallenge.org/media/images/Portada_bmvLJVn.width-1024.png)
+
 **Is that "historic" heatwave or flood a real trend, or just a bad year?**
 Sen-a is a web app where anyone can learn to answer that question with real NASA data.
 
 Guided by **Sen**, a young sentinel who watches over Earth from a space station, you complete short missions: explore a climate signal, read its trend, and decide whether it is a **★ confirmed case** or just a **☆ clue**. Every finding becomes a star in your own constellation, and you learn to review other people's research, catching mistakes like confusing correlation with causation.
 
-🔗 **Live demo:** [sen-a.vercel.app](https://sen-a.vercel.app)
-🚀 Built for the **NASA Space Apps Challenge 2026**, challenge *Be an Earth System Trend Detective*.
+ **Live demo:** [sen-a.vercel.app](https://sen-a.vercel.app)
+ Built for the **NASA Space Apps Challenge 2026**, challenge *Be an Earth System Trend Detective*.
 
 > The demo starts with the guided tutorial (Mission 00 · Valencia). Finish it to unlock the rest of the app.
 
